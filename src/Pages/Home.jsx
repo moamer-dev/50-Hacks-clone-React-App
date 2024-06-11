@@ -1,6 +1,7 @@
 import React from 'react'
 import { useContext, useState } from 'react'
 import { ThemeContext } from '../context/ThemeContext'
+import { Tab } from '../Components/Tab'
 
 function Home() {
     const { theme, setTheme } = useContext(ThemeContext)
@@ -19,11 +20,12 @@ function Home() {
     return (
         <div className="flex justify-center min-h-screen">
             <div className="text-center">
-                <h1 className="text-4xl font-bold mt-6 mb-4">
+                <h1 className="text-4xl font-bold mt-10 mb-4">
                     Top 50 productivity hacks chosen by internet and you
                 </h1>
+                <p className='mt-5 font-bold text-amber-400'>Select your theme</p>
                 <select
-                    className="select select-bordered w-full max-w-xs"
+                    className="select select-bordered w-full max-w-xs mt-2"
                     onChange={handleThemeChange}
                     value={theme}
                 >
@@ -34,6 +36,10 @@ function Home() {
                         </option>
                     ))}
                 </select>
+                <div className="mt-10">
+                    <Tab />
+                </div>
+
             </div>
         </div>
     )
