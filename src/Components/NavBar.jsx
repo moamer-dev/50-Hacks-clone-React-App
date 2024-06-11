@@ -1,6 +1,10 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 function NavBar() {
+    const navigation = useNavigate();
+
     return (
         <div className="navbar bg-base-100">
             <div className="navbar-start">
@@ -20,7 +24,7 @@ function NavBar() {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-warning">+ Add idea</a>
+                <a onClick={() => navigation('/new')} className="btn btn-warning">+ Add Hack</a>
             </div>
         </div>
     )
