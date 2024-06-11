@@ -1,4 +1,4 @@
-import { serial, pgTable, varchar, integer, timestamp } from "drizzle-orm/pg-core";
+import { serial, pgTable, varchar, integer, timestamp, pgSchema } from "drizzle-orm/pg-core";
 
 
 export const hacks = pgTable("hacks", {
@@ -6,5 +6,5 @@ export const hacks = pgTable("hacks", {
     content: varchar('content').notNull(),
     username: varchar('username').notNull(),
     vote: integer('vote').default(0),
-    created_at: timestamp('created_at').default('now()')
+    created_at: varchar('created_at').notNull(),
 });
