@@ -16,12 +16,7 @@ function NavBar() {
                         <li><a>Item 1</a></li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">50 Hacks</a>
-            </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                </ul>
+                <a onClick={() => navigation('/')} className="btn btn-ghost text-xl">50 Hacks</a>
             </div>
             <div className="navbar-end">
                 <a onClick={() => navigation('/new')} className="btn btn-warning">+ Add Hack</a>

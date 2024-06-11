@@ -10,7 +10,6 @@ import Home from './Pages/Home'
 function App() {
 
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
-  console.log(theme)
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
