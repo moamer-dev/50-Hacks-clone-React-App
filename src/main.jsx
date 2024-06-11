@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import NewIdea from './Pages/NewIdea.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,7 +13,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  }
+  },
+  {
+    path: "/new",
+    element: <NewIdea />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
