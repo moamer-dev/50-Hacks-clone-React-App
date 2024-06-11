@@ -1,7 +1,9 @@
 import React from 'react'
 import { useContext, useState } from 'react'
+import { ThemeContext } from '../context/ThemeContext'
 
 function Home() {
+    const { theme, setTheme } = useContext(ThemeContext)
 
     const handleThemeChange = (e) => {
         setTheme(e.target.value)
